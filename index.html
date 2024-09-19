@@ -30,14 +30,19 @@
             <div class="divider"></div>
             <!-- Features Start -->
             <div class="flex gap-4">
-              <button class="btn btn-Normal">Add Money</button>
-              <button class="btn btn-Normal">Cash Out</button>
-              <button class="btn btn-Normal">Transactions</button>
+              <button id="show-add-money-form" class="btn btn-Normal">
+                Add Money
+              </button>
+              <button id="show-cash-out-form" class="btn btn-Normal">Cash Out</button>
+              <button id="show-transactions-history" class="btn btn-Normal">Transactions</button>
             </div>
             <!-- Features End -->
             <div class="divider"></div>
             <!-- Add Money Form Start -->
-            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <div
+              id="add-money-form"
+              class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+            >
               <form class="card-body">
                 <div class="form-control">
                   <label class="label">
@@ -73,6 +78,7 @@
             <!-- Add Money Form End -->
             <!-- Cash Out Form Start -->
             <div
+              id="cash-out-form"
               class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
             >
               <form class="card-body">
@@ -83,7 +89,7 @@
                   <input
                     id="cash-out-amount"
                     type="text"
-                    placeholder="Add Money Amount"
+                    placeholder="Cash Out Amount"
                     class="input input-bordered"
                     required
                   />
@@ -108,6 +114,11 @@
               </form>
             </div>
             <!-- Cash Out Form End -->
+            <!-- Transactions Start -->
+            <div id="transactions-history" class="hidden">
+              <h1 class="text-5xl text-center">Transactions History Empty</h1>
+            </div>
+            <!-- Transactions End -->
           </div>
         </div>
       </div>

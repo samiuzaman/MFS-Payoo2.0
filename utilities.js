@@ -21,3 +21,11 @@ function getTextFieldValueById(id) {
   const textToNumber = parseFloat(textValue);
   return textToNumber;
 }
+
+function showHideSectionById(id) {
+  document.getElementById("add-money-form").classList.add("hidden");
+  document.getElementById("cash-out-form").classList.add("hidden");
+  document.getElementById("transactions-history").classList.add("hidden");
+
+  document.getElementById(id).classList.remove("hidden");
+}
